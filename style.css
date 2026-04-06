@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+:root {
+  --st: #1a1a1a;
+  --nd: rgb(175, 4, 4);
+  --rd: rgb(255, 0, 0);
+  --accent: #ffffff;
+}
+
+body{
+    background-color: var(--st);
+    color: var(--accent);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background: linear-gradient(90deg, var(--nd) 55%, var(--rd));
+    padding: 15px 25px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5)
+}
+
+.logo{
+    animation: reverse-slide both;
+    animation-duration: 1.5s;
+}
+
+ul li{
+    list-style: none;
+    display: inline;
+    color: var(--accent);
+}
+
+ul li a{
+    display: inline-block;
+    color: var(--accent);
+    text-decoration: none;
+    padding: 7px;
+    transition: 0.5s;
+}
+
+ul li a:hover{
+    transform: translateY(-5px) scale(1.1);
+    color: #c9c9c9;
+}
+
+ul li:nth-child(1){
+    animation: up both;
+    animation-duration: 1.5s;
+    animation-delay: 1s;  
+}
+
+ul li:nth-child(2){
+    animation: down both;
+    animation-duration: 1.5s;
+    animation-delay: 1s;  
+}
+
+ul li:nth-child(3){
+    animation: up both;
+    animation-duration: 1.5s;
+    animation-delay: 1s;  
+}
+
+ul li:nth-child(5){
+    animation: down both;
+    animation-duration: 1.5s;
+    animation-delay: 1s;  
+}
+
+ul li:nth-child(4){
+    animation: up both;
+    animation-duration: 1.5s;
+    animation-delay: 1s;  
+}
+
+.hero{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("gym.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1{
+    margin-left: 20px;
+    font-size: 3rem;
+    text-shadow: 1px 1px 5px black;
+    animation: slide both;
+    animation-duration: 1.5s;
+}
+
+.hero span{
+    color: var(--rd);
+    font-weight: bolder;
+}
+
+.hero p{
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 5px black;
+    animation: slide both;
+    animation-duration: 1.5s;
+    animation-delay: 1s;   
+}
+
+.cta{
+    text-decoration: none;
+    color: var(--accent);
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: var(--nd);
+    max-width: fit-content;
+    border-radius: 15px;
+    animation: up both;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    transition: 0.5s;
+}
+
+.cta:hover{
+    background-color: var(--rd);
+    box-shadow: 0px 0px 15px var(--rd);
+}
+
+#about{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("man.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#about h2{
+    margin: 10px 40px;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 5px black;
+    animation: slide both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+}
+
+.disc{
+    margin: 10px 40px;
+    font-size: 1.1rem;
+    max-width: 65%;
+    text-shadow: 1px 1px 5px black;
+    animation: slide both;
+    animation-timeline: view();
+    animation-range: entry 40% cover 60%;
+}
+
+.checks{
+    margin: 10px 40px;
+    font-size: 1.1rem;
+    max-width: 65%;
+    text-shadow: 1px 1px 5px black;
+    animation: slide both;
+    animation-timeline: view();
+    animation-range: entry 60% cover 80%;
+}
+
+#about span{
+    color: var(--rd);
+    font-weight: bolder;
+}
+
+#services{
+    background-color: black;
+    padding: 30px ;
+    border-radius: 15px;
+    max-width: 90%;
+    margin: 25px auto ;
+    box-shadow: 5px 5px 0px var(--rd);
+}
+
+.services{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 22px;
+    margin: 40px 20px;
+}
+
+#services h2{
+    text-align: center;
+    margin: 25px;
+    text-decoration: underline;
+    font-size: 1.8rem;
+    text-underline-offset: 3px;
+    animation: slide both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+}
+
+.service{
+    background-color: var(--nd);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px var(--rd); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service h4{
+    font-size: 1.1rem;
+    margin-top: 17px;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.service p{
+    font-size: 0.9rem;
+    margin: 25px 0px;
+    text-align: center;
+}
+
+
+.service a{
+    color: var(--accent);
+    text-underline-offset: 2px;
+    margin: auto;
+}
+
+.service a:hover{
+    color: rgb(173, 173, 173);
+    text-underline-offset: 2px;
+    margin: auto;
+}
+
+.services .one, .services .three{
+    animation: up both;
+    animation-timeline: view();
+    animation-range: entry 40% cover 60%;
+}
+
+.services .two, .services .four{
+    animation: down both;
+    animation-timeline: view();
+    animation-range: entry 40% cover 60%;
+}
+
+#testimonials{
+    background-color: black;
+    padding: 50px ;
+    border-radius: 15px;
+    max-width: 75%;
+    margin: 40px auto ;
+    box-shadow: 5px 5px 0px var(--rd);
+}
+
+.testimonials{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin: 40px 20px;
+}
+
+#testimonials h2{
+    text-align: center;
+    margin: 10px;
+    text-decoration: underline;
+    font-size: 1.8rem;
+    text-underline-offset: 3px;
+}
+
+#testimonials span{
+    color: var(--rd);
+    font-weight: bolder;
+}
+
+.test{
+    background-color: var(--nd);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 13px var(--rd); 
+    transition: 0.5s;
+}
+
+.test:hover{
+    transform: scale(1.1) translateY(-5px);
+}
+
+.test h4{
+    font-size: 1.1rem;
+    margin-top: 17px;
+    margin-left: 10px;
+}
+
+.test p{
+    font-size: 0.9rem;
+    margin: 17px 10px;
+}
+
+#contact{
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    padding: 50px 20px;
+    margin: 40px 0px;
+}
+
+#contact h2{
+    font-size: 1.8rem;
+    margin: 10px;
+    padding: 6px;
+    animation: reverse-slide both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+
+#contact p{
+    font-size: 1.1rem;
+    margin: 20px;
+    animation: slide both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+}
+
+#contact input{
+    font-size: 1.1rem;
+    padding: 5px; 
+    width: 100%;
+    max-width: 250px;
+}
+
+#name{
+    animation: reverse-slide both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+}
+
+input:not(#name){
+    animation: slide both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+}
+
+#contact button{
+    display: block;
+    font-size: 1.1rem;
+    margin: 15px;
+    padding: 7px 15px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: var(--nd);
+    border: none;
+    color: var(--accent);
+    cursor: pointer;
+    transition: 0.5s;
+    animation: up 1s both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+}
+
+#contact button:hover{
+    background-color: var(--rd);
+    box-shadow: 0px 0px 15px var(--rd);
+}
+
+footer{
+    text-align: center;
+    color: rgb(199, 199, 199);
+    margin: 20px;
+}
+
+@keyframes slide{
+    from{opacity: 0; transform: translateX(50px);}
+    to{opacity: 1; transform: translateX(0px);}
+}
+
+@keyframes reverse-slide{
+    from{opacity: 0; transform: translateX(-50px);}
+    to{opacity: 1; transform: translateX(0px);}
+}
+
+@keyframes up{
+    from{opacity: 0; transform: translateY(50px) scale(0.8);}
+    to{opacity: 1; transform: translateY(0px) scale(1);}
+}
+
+@keyframes down{
+    from{opacity: 0; transform: translateY(-50px) scale(0.8);}
+    to{opacity: 1; transform: translateY(0px) scale(1);}
+}
+
+@media (max-width: 900px){
+  .testimonials{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px){
+    .testimonials{grid-template-columns: 1fr;; gap: 20px;}
+    #testimonials p{font-size: 0.7rem; padding: 1px; margin: 0px 4px;}
+    #testimonials h4{font-size: 1rem; padding: 0px; margin: 4px}
+}
+
+@media (max-width: 600px){
+    .testimonials{grid-template-columns: 1fr;}
+    .disc, .checks{max-width: 100%;}
+}
+
+@media (max-width:480px){
+    nav{font-size: 0.85rem; padding: 10px;}
+    .hero h1{font-size: 1.6rem;}
+    .hero p{font-size: 0.8rem;}
+    .cta{font-size: 0.7rem; padding: 7px;}
+    #about h2{font-size: 1.5rem;}
+    #about p{font-size: 0.8rem;}
+    #services h2{font-size: 1.5rem;}
+    .service{padding: 10px; font-size: 0.9rem;}
+    #services h4{font-size: 0.9rem;}
+    #services p{font-size: 0.8rem;}
+    #testimonials h2{font-size: 1.3rem;}
+    #testimonials button{font-size: 2rem;}
+    #contact h2{font-size: 1.4rem;}
+    #contact p{font-size: 0.8rem;}
+    #contact input{font-size: 1rem; padding: 2px;}
+    #contact button{font-size: 1rem; padding: 5px;}
+    footer{font-size: 0.9rem;}
+    .testimonials{grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 0; padding: 0;}
+    #testimonials p{font-size: 0.6rem; padding: 0px; margin: 0px 0px;}
+    #testimonials h4{font-size: 0.8rem; padding: 0px; margin: 0px 0px}
+}
+
